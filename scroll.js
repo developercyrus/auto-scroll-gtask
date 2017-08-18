@@ -14,6 +14,7 @@ function scrollDown() {
 		console.log('scrolling down');
 	}, 50);
 }
+
 function scrollUp() { 
 	scroll = setInterval(function(){ 
 		window.scrollBy(0, -1); 
