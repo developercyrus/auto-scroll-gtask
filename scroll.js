@@ -8,10 +8,17 @@
  * 
  */
 
-function scroll() { 
+function scrollDown() { 
 	scroll = setInterval(function(){ 
-		window.scrollBy(0, 2); 
-		console.log('scroll');
-	}, 250);
+		window.scrollBy(0, -1); 
+		console.log('scrolling down');
+	}, 50);
 }
-scroll();
+function scrollUp() { 
+	scroll = setInterval(function(){ 
+		window.scrollBy(0, -1); 
+		console.log('scrolling up');
+	}, 50);
+}
+scrollUp();
+//scrollDown();
