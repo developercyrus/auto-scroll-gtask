@@ -21,10 +21,6 @@ function scrollDown() {
 
 function scrollUp() {
     try {
-    	// only works in chrome console but doesn't work in actual environment
-    	//document.querySelector("div.J").scrollTop += 1;
-    	
-    	// only works in actual environment but doesn't work in chrome console
     	document.getElementsByTagName("iframe")[0].contentDocument.querySelector("div.J").scrollTop -= 1
     }
     catch(err) {
