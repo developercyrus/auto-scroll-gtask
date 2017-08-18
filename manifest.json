@@ -1,0 +1,14 @@
+{
+    "manifest_version": 2,   
+    "name": "Auto Scroll Google Tasks",
+    "description": "To scroll automatically inside Google Tasks",
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "matches": ["https://*.google.com/*"],
+            "js": ["scroll.js"],
+            "run_at": "document_end",
+            "all_frames": true
+        }
+    ]
+}
