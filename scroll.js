@@ -1,25 +1,39 @@
 /*
- * 
- * work for 
- * https://mail.google.com/tasks/m
- * 
- * doesn't work for 
- * https://mail.google.com/tasks/canvas
- * 
+ *  work for 
+ *  https://mail.google.com/tasks/canvas?pli=1
  */
 
-function scrollDown() { 
-	scroll = setInterval(function(){ 
-		window.scrollBy(0, -1); 
-		console.log('scrolling down');
-	}, 50);
+function scrollDown() {
+    try {
+    	// only works in chrome console but doesn't work in actual environment
+    	//document.querySelector("div.J").scrollTop += 1;
+    	
+    	// only works in actual environment but doesn't work in chrome console
+    	document.getElementsByTagName("iframe")[0].contentDocument.querySelector("div.J").scrollTop += 1
+    }
+    catch(err) {
+    	//console.log(err);
+    }
+  
+    //console.log('scolling!');
+    setTimeout(function(){scrollDown();}, 100);
 }
 
-function scrollUp() { 
-	scroll = setInterval(function(){ 
-		window.scrollBy(0, -1); 
-		console.log('scrolling up');
-	}, 50);
+function scrollUp() {
+    try {
+    	// only works in chrome console but doesn't work in actual environment
+    	//document.querySelector("div.J").scrollTop += 1;
+    	
+    	// only works in actual environment but doesn't work in chrome console
+    	document.getElementsByTagName("iframe")[0].contentDocument.querySelector("div.J").scrollTop -= 1
+    }
+    catch(err) {
+    	//console.log(err);
+    }
+  
+    //console.log('scolling!');
+    setTimeout(function(){scrollUp();}, 100);
 }
-scrollUp();
+
 //scrollDown();
+scrollUp();
