@@ -17,14 +17,14 @@ function scrollUp() {
 		    	//document.querySelector("div.J").scrollTop += 1;
 		    	
 		    	// only works in actual environment but doesn't work in chrome console
-		    	document.getElementsByTagName("iframe")[0].contentDocument.querySelector("div.J").scrollTop -= 2
+		    	document.getElementsByTagName("iframe")[0].contentDocument.querySelector("div.J").scrollTop -= 1
 		    }
 		    catch(err) {
 		    	//console.log(err);
 		    }
 		  
 		    //console.log('scolling!');
-		    setTimeout(function(){scrollUp();}, 200);
+		    setTimeout(function(){scrollUp();}, 50);
 		}
 	});
 }
